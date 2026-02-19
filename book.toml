@@ -1,0 +1,16 @@
+[book]
+title = "Neovim 마스터 북"
+authors = ["gzonelee"]
+language = "ko"
+multilingual = false
+src = "src"
+description = "기본 편집에서 전문가 수준까지, Neovim 완전 정복 가이드"
+
+[build]
+build-dir = "book"
+
+[output.html]
+default-theme = "navy"
+preferred-dark-theme = "navy"
+git-repository-url = ""
+additional-css = []
