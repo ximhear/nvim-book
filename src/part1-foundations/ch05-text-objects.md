@@ -38,6 +38,20 @@ daw → "Hello, world!"          (beautiful + 앞 공백 삭제)
 
 `diw`와 `daw`의 차이: `daw`는 주변 공백까지 삭제하므로 단어를 제거한 뒤 공백이 중복되지 않는다.
 
+**word와 WORD의 차이**: `w`는 알파벳·숫자·밑줄만 하나의 단어로 취급하고 구두점은 별도의 단어로 분리한다. `W`는 공백으로만 구분하므로 구두점을 포함한 연속된 비공백 문자 전체를 하나의 WORD로 취급한다.
+
+```
+user.getName()
+    ↑ 커서 위치
+
+diw → "user.()getName"   ← 아니라  →  "user.()       (getName만 삭제)
+diW → " "                              (user.getName() 전체 삭제)
+ciw → "user.()          + Insert 모드  (getName 자리에 입력)
+ciW → "                  + Insert 모드  (전체를 새로 입력)
+```
+
+`iW`/`aW`는 URL(`https://example.com`), 파일 경로(`src/utils/helper.js`), 메서드 체인(`obj.method()`) 등 구두점이 포함된 덩어리를 한 번에 다룰 때 유용하다.
+
 ### 문장 (sentence)
 
 | 오브젝트 | 범위 |
